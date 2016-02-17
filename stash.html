@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Git Quick Reference · A fairly simple Git reference listing
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://bridanp.github.io/git-ref/public/css/poole.css">
+  <link rel="stylesheet" href="https://bridanp.github.io/git-ref/public/css/syntax.css">
+  <link rel="stylesheet" href="https://bridanp.github.io/git-ref/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://bridanp.github.io/git-ref/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="https://bridanp.github.io/git-ref/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+<body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="http://bridanp.github.io/git-static/repository.html/">Repository</a>
+  <a class="sidebar-nav-item" href="http://bridanp.github.io/git-static/stash.html/">Stash</a>
+  <a class="sidebar-nav-item" href="https://bridanp.github.io/git-static/workspace.html/">Workspace</a>
+
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      © 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://bridanp.github.io/git-static/workspace.html/" title="Home">Git Quick Reference</a>
+            <small>A fairly simple Git reference listing</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Stash Commands</h1>
+  <h3>Temporary Storage for Modifications</h3>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash [save] [msg]</h3>
+<p>Store all local modifications to a stash.  Save and the msg parameters are optional.</p>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash apply [stash]</h3>
+<p>Brings in changes from the specified stash to the work area.  Ommit the <stash> and it pulls the default stash.
+
+</stash></p><h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash pop</h3>
+<p>Apply the changes from the last pop and delete that stash.  Can specify a stash at the end.</p>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash list</h3>
+<p>List all of the stashes currently available.</p>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash show [stash]</h3>
+<p>Outputs the difference in the stash and the parent.  [stash] can be left off and the system will show the latest stash.</p>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash drop [stash]</h3>
+<p>Remove one stash from the list.  If the [stash] is left off, the command drops the latest version.</p>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash clear</h3>
+<p>Removes all stashes.</p>
+
+<h3><a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git stash branch [branchname] [stash]</h3>
+<p>Create and checkout the branch named [branchname] using the [stash] listed.  If [stash] is left off of the command, the latest is used.</p>
+<p></p>
+
+</div>
+     </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  
+
+</body>
+</html>
